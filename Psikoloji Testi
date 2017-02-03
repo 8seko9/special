@@ -1,0 +1,223 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _30.Psikolojik_analiz
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        int soru;
+        int toplam=0;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           axWindowsMediaPlayer1.URL = "D:\\Müzikler\\Milow - Ayo Technology.mp3";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            soru++;
+
+            
+            button6.Text = "Sonraki";
+            button6.Enabled = false;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+
+            if (soru==1)
+            {
+                textBox1.Text = "1)Sevgilinizle ya da eşinizle 'mükemmel bir akşam' size aşağıdakilerden hangisini ifade ediyor?";
+                button1.Text = "Rock konserine gitmek";
+                button2.Text = "Lunaparka gitmek";
+                button3.Text = "Sinemaya gitmek";
+                button4.Text = "Romantik bir yemek";
+                button5.Text = "Arabayla turlamak";
+            }
+            if(soru ==2)
+            {
+                textBox1.Text = "2)En sevdiğiniz müzik türü?";
+                button1.Text = "Alternatif rock";
+                button2.Text = "Rock n Roll";
+                button3.Text = "Klasik";
+                button4.Text = "Arabesk";
+                button5.Text = "Pop";
+            }
+            if(soru ==3)
+            {
+                textBox1.Text = "3)Hangi tür film seversiniz?";
+                button1.Text = "Korku";
+                button2.Text = "Komedi";
+                button3.Text = "Müzikal";
+                button4.Text = "Romantik";
+                button5.Text = "Komedi";
+            }
+            if(soru==4)
+            {
+                textBox1.Text = "4)Aşağıdaki mesleklerden hangisini seçersiniz?";
+                button1.Text = "Barmen";
+                button2.Text = "Polis";
+                button3.Text = "Öğretmen";
+                button4.Text = "Futbolcu";
+                button5.Text = "Garson";
+            }
+            if (soru == 5)
+            {
+                textBox1.Text = "5)1 saat boş vaktinizi değerlendirmek için size hangisi en uygun?";
+                button1.Text = "Tv izlemek";
+                button2.Text = "İnternete girmek";
+                button3.Text = "Uyumak";
+                button4.Text = "Müzik dinlemek";
+                button5.Text = "Kitap okumak";
+            }
+            if (soru == 6)
+            {
+                textBox1.Text = "6)Aşağıdaki renklerden hangisini seçersiniz?";
+                button1.Text = "Sarı";
+                button2.Text = "Kahverengi";
+                button3.Text = "Mavi";
+                button4.Text = "Kırmızı";
+                button5.Text = "Beyaz";
+            }
+            if (soru == 7)
+            {
+                textBox1.Text = "7)Aşağıdaki yiyeceklerden hangisini dayanamayıp yersiniz?";
+                button1.Text = "Suşi";
+                button2.Text = "Makarna";
+                button3.Text = "Pizza";
+                button4.Text = "Dondurma";
+                button5.Text = "Salata";
+            }
+            if (soru == 8)
+            {
+                textBox1.Text = "8)En sevdiğiniz tatil hangisi?";
+                button1.Text = "Çocuk bayramı";
+                button2.Text = "Yılbaşı tatili";
+                button3.Text = "Ramazan bayramı";
+                button4.Text = "Sevgililer günü";
+                button5.Text = "Kurban bayramı";
+            }
+            if (soru == 9)
+            {
+                textBox1.Text = "9)Hangi şehirde olmak isterdiniz?";
+                button1.Text = "Las vegas";
+                button2.Text = "Hawaii";
+                button3.Text = "Hollywood";
+                button4.Text = "Paris";
+                button5.Text = "İspanya";
+            }
+            if (soru == 10)
+            {
+                textBox1.Text = "10)Nasıl biriyle vakit geçirmekten hoşlanırsınız?";
+                button1.Text = "Parti canavarıyla";
+                button2.Text = "Güzel/yakışıklı biriyle";
+                button3.Text = "Komik biriyle";
+                button4.Text = "Duygusal biriyle";
+                button5.Text = "Akıllı biriyle";
+            }
+            if(soru ==11)
+            {
+                label2.Text = toplam.ToString();
+                button7.Enabled = true;
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            toplam = toplam + 1;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            toplam = toplam + 2;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            toplam = toplam + 3;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            toplam = toplam + 4;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            toplam = toplam + 5;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (toplam >= 10 && toplam <= 17)
+            {
+                textBox1.Text = "Siz vahşi ve çılgın birisiniz.Eğleneyim derken uçuyorsunuz.Ama her zaman ne yaptığınızın farkındasınız,kontrolü kaybetmiyorsunuz.";
+                }
+            if (toplam >= 18 && toplam <= 26)
+            {
+                textBox1.Text = "Siz eğlenceli ve arkadaş canlısı birisiniz.Etrafınıza neşe saçıyorsunuz";
+
+            }
+            if (toplam >= 27 && toplam <= 34)
+            {
+                textBox1.Text = "Öyle tatlısınız ki sizi sevmemek imkansız.Siz insanların asla kaybetmek istemeyeceği türden bir dostsunuz.";
+
+            }
+            if (toplam >= 35 && toplam <= 42)
+            {
+                textBox1.Text = "Siz iflah olmaz bir romantiksiniz.Şarap,kırmızı güller bunlar yaşam tarzınız.Söz verirsiniz ve o sözü ne olursa olsun yerine getirirsiniz.";
+
+            }
+            if (toplam >= 43 && toplam <= 50)
+            {
+                textBox1.Text = "Belirgin özelliğiniz hızlı ve doğru karar verebilmenizdir.Her olay için kafanızda planınız vardır.Fiziksel ve zihinsel gücünüz çok fazla.";
+
+            }
+        }
+
+       
+    }
+}
