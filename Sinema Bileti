@@ -1,0 +1,234 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _29.Sinemabileti
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+       
+
+
+
+        int seans1,seans1ucret =0;
+        int seans2, seans2ucret = 0;
+        int seans3, seans3ucret = 0;
+        int mısır = 0;
+        int fiyat = 0;
+        int su = 0;
+        int sufiyat = 0;
+        int kola = 0;
+        int kolafiyat = 0;
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            seans1++;
+            seans1ucret = seans1ucret + 8;
+
+            textBox1.Text = seans1.ToString();
+            textBox2.Text = seans1ucret.ToString();
+
+            if (seans1 == 10)
+            {
+                button1.Enabled = false;
+            }
+            if (seans1 > 0)
+            {
+                button2.Enabled = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            seans1--;
+            seans1ucret = seans1ucret - 8;
+
+            textBox1.Text = seans1.ToString();
+            textBox2.Text = seans1ucret.ToString();
+
+            if(seans1 ==0)
+            {
+                button2.Enabled = false;
+            }
+            if(seans1 <=10)
+            {
+                button1.Enabled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            seans2++;
+            seans2ucret = seans2ucret + 8;
+
+            textBox3.Text = seans2.ToString();
+            textBox4.Text = seans2ucret.ToString();
+
+            if (seans2 == 10)
+            {
+                button3.Enabled = false;
+            }
+            if (seans2 > 0)
+            {
+                button4.Enabled = true;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            seans2--;
+            seans2ucret = seans2ucret - 8;
+
+            textBox3.Text = seans2.ToString();
+            textBox4.Text = seans2ucret.ToString();
+
+            if (seans2 == 0)
+            {
+                button4.Enabled = false;
+            }
+            if (seans2 <= 10)
+            {
+                button3.Enabled = true;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            seans3++;
+            seans3ucret = seans3ucret + 8;
+
+            textBox5.Text = seans3.ToString();
+            textBox6.Text = seans3ucret.ToString();
+
+            if (seans3 == 10)
+            {
+                button5.Enabled = false;
+            }
+            if (seans3 > 0)
+            {
+                button6.Enabled = true;
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            seans3--;
+            seans3ucret = seans3ucret - 8;
+
+            textBox5.Text = seans3.ToString();
+            textBox6.Text = seans3ucret.ToString();
+
+            if (seans3 == 0)
+            {
+                button6.Enabled = false;
+            }
+            if (seans3 <= 10)
+            {
+                button5.Enabled = true;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+            mısır++;
+            fiyat = fiyat + 3;
+
+            textBox7.Text = mısır.ToString();
+            textBox8.Text = fiyat.ToString();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            mısır--;
+            fiyat = fiyat - 3;
+
+            textBox7.Text = mısır.ToString();
+            textBox8.Text = fiyat.ToString();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            su++;
+            sufiyat = sufiyat + 3;
+
+            textBox9.Text = su.ToString();
+            textBox10.Text = sufiyat.ToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            su--;
+            sufiyat = sufiyat - 3;
+
+            textBox9.Text = su.ToString();
+            textBox10.Text = sufiyat.ToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            kola++;
+            kolafiyat = kolafiyat + 3;
+
+            textBox11.Text = kola.ToString();
+            textBox12.Text = kolafiyat.ToString();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            kola--;
+            kolafiyat = kolafiyat - 3;
+
+            textBox9.Text = kola.ToString();
+            textBox10.Text = kolafiyat.ToString();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int toplamizleyici,toplamucret;
+
+            toplamizleyici = seans1 + seans2 + seans3;
+            toplamucret = seans1ucret + seans2ucret + seans3ucret;
+
+            label18.Text = toplamizleyici.ToString();
+            label19.Text = toplamucret.ToString();
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            int toplamsatilan, toplamfiyat;
+
+            toplamsatilan = mısır + kola + su;
+            toplamfiyat = fiyat + kolafiyat + sufiyat;
+
+            label21.Text = toplamfiyat.ToString();
+            label23.Text = toplamsatilan.ToString();
+        }
+
+    }
+
+
+
+
+
+
+}
+
+
