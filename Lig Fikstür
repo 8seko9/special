@@ -1,0 +1,195 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _5.RandomLig
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+        Random gol = new Random();
+        int gspuan = 0;
+        int fbpuan = 0;
+        int bjkpuan = 0;
+        int tspuan = 0;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Enabled = false;
+            int a = gol.Next(0, 5);
+            int b = gol.Next(0,5);
+            int c = gol.Next(0, 5);
+            int d = gol.Next(0, 5);
+
+            label7.Text = a.ToString();
+            label8.Text = b.ToString();
+            label9.Text = c.ToString();
+            label10.Text = d.ToString();
+
+            if( Convert.ToInt32(label7.Text) > Convert.ToInt32(label8.Text) )
+            {
+                gspuan = gspuan + 3;
+                labelgspuan.Text = gspuan.ToString();
+            }
+
+
+             if (Convert.ToInt32(label7.Text) < Convert.ToInt32(label8.Text))
+                 
+            {
+                          fbpuan = fbpuan + 3;
+                labelfbpuan.Text = fbpuan.ToString();
+
+            }
+
+             if (Convert.ToInt32(label7.Text) == Convert.ToInt32(label8.Text))
+            {
+                gspuan = gspuan + 1;
+                fbpuan = fbpuan + 1;
+
+                labelgspuan.Text = gspuan.ToString();
+                labelfbpuan.Text = fbpuan.ToString();
+            }
+
+
+            if (Convert.ToInt32(label9.Text) > Convert.ToInt32(label10.Text))
+            {
+                bjkpuan = bjkpuan + 3;
+                labelbjkpuan.Text = bjkpuan.ToString();
+            }
+
+
+            if (Convert.ToInt32(label9.Text) < Convert.ToInt32(label10.Text))
+
+            {
+                tspuan = tspuan + 3;
+                labeltspuan.Text = tspuan.ToString();
+
+            }
+
+            if (Convert.ToInt32(label9.Text) == Convert.ToInt32(label10.Text))
+            {
+                bjkpuan = bjkpuan + 1;
+                tspuan = tspuan + 1;
+
+                labelbjkpuan.Text = bjkpuan.ToString();
+                labeltspuan.Text = tspuan.ToString();
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+            int a = gol.Next(0, 5);
+            int b = gol.Next(0, 5);
+            int c = gol.Next(0, 5);
+            int d = gol.Next(0, 5);
+
+            label11.Text = a.ToString();
+            label12.Text = b.ToString();
+            label13.Text = c.ToString();
+            label14.Text = d.ToString();
+
+            if (Convert.ToInt32(label11.Text) > Convert.ToInt32(label12.Text))
+            {
+                gspuan = gspuan + 3;
+                labelgspuan.Text = gspuan.ToString();
+            }
+
+
+            if (Convert.ToInt32(label11.Text) < Convert.ToInt32(label12.Text))
+
+            {
+                bjkpuan = bjkpuan + 3;
+                labelbjkpuan.Text = bjkpuan.ToString();
+
+            }
+
+            if (Convert.ToInt32(label11.Text) == Convert.ToInt32(label12.Text))
+            {
+                gspuan = gspuan + 1;
+                bjkpuan = bjkpuan + 1;
+
+                labelgspuan.Text = gspuan.ToString();
+                labelbjkpuan.Text = bjkpuan.ToString();
+            }
+
+
+            if (Convert.ToInt32(label13.Text) > Convert.ToInt32(label14.Text))
+            {
+                fbpuan = fbpuan + 3;
+                labelfbpuan.Text = fbpuan.ToString();
+            }
+
+
+            if (Convert.ToInt32(label13.Text) < Convert.ToInt32(label14.Text))
+
+            {
+                tspuan = tspuan + 3;
+                labeltspuan.Text = tspuan.ToString();
+
+            }
+
+            if (Convert.ToInt32(label13.Text) == Convert.ToInt32(label14.Text))
+            {
+                fbpuan = fbpuan + 1;
+                tspuan = tspuan + 1;
+
+                labelfbpuan.Text = fbpuan.ToString();
+                labeltspuan.Text = tspuan.ToString();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button3.Enabled = false;
+
+            if(Convert.ToInt32(labelgspuan.Text) >  Convert.ToInt32(labelfbpuan.Text) && 
+                Convert.ToInt32(labelgspuan.Text) > Convert.ToInt32(labelbjkpuan.Text) &&
+                Convert.ToInt32(labelgspuan.Text) > Convert.ToInt32(labeltspuan.Text)    )
+            {
+
+                MessageBox.Show("Şampiyon gs");
+            }
+
+            if (Convert.ToInt32(labelfbpuan.Text) > Convert.ToInt32(labelgspuan.Text) &&
+                Convert.ToInt32(labelfbpuan.Text) > Convert.ToInt32(labelbjkpuan.Text) &&
+                Convert.ToInt32(labelfbpuan.Text) > Convert.ToInt32(labeltspuan.Text))
+            {
+
+                MessageBox.Show("Şampiyon fb");
+            }
+
+            if (Convert.ToInt32(labelbjkpuan.Text) > Convert.ToInt32(labelfbpuan.Text) &&
+                Convert.ToInt32(labelbjkpuan.Text) > Convert.ToInt32(labelgspuan.Text) &&
+                Convert.ToInt32(labelbjkpuan.Text) > Convert.ToInt32(labeltspuan.Text))
+            {
+
+                MessageBox.Show("Şampiyon bjk");
+            }
+
+            if (Convert.ToInt32(labeltspuan.Text) > Convert.ToInt32(labelfbpuan.Text) &&
+                Convert.ToInt32(labeltspuan.Text) > Convert.ToInt32(labelbjkpuan.Text) &&
+                Convert.ToInt32(labeltspuan.Text) > Convert.ToInt32(labelgspuan.Text))
+            {
+
+                MessageBox.Show("Şampiyon ts");
+            }
+
+
+
+
+
+
+        }
+    }
+}
